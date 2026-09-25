@@ -1,18 +1,9 @@
 # Secure RESTful Authentication Engine 
-![Python](https://shields.io)
 
-![FastAPI](https://shields.io)
 
-![Pydantic](https://shields.io)
+ 
 
-![PostgreSQL](https://shields.io)
-
-![Pytest](https://shields.io)
-
-![Git](https://shields.io)
-
-![Bcrypt](https://shields.io)
-
+![Python](https://shields.io) ![FastAPI](https://shields.io) ![Pydantic](https://shields.io) ![PostgreSQL](https://shields.io) ![Pytest](https://shields.io) ![Git](https://shields.io) 
  
 
 I created a backend service designed to securely manage user registration and authentication lifecycles using a relational database (PostgreSQL) infrastructure. 
@@ -25,6 +16,8 @@ I created a backend service designed to securely manage user registration and au
 
 
 ## Technical Stack 
+
+ 
 
 | Technology | Logo / Badge | Component Layer | Project Implementation Role | 
 
