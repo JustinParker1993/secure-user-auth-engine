@@ -1,41 +1,35 @@
 # Secure RESTful Authentication Engine 
-
-
- 
-
-![Python](https://shields.io) ![FastAPI](https://shields.io) ![Pydantic](https://shields.io) ![PostgreSQL](https://shields.io) ![Pytest](https://shields.io) ![Git](https://shields.io) 
+![Python](https://img.shields.io/badge/Python-3.14-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?logo=pytest&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?logo=pydantic&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+![bcrypt](https://img.shields.io/badge/bcrypt-525252?logo=letsencrypt&logoColor=white)
  
 
 I created a backend service designed to securely manage user registration and authentication lifecycles using a relational database (PostgreSQL) infrastructure. 
  
 
- ## Objective
 
+ ## Objective
+-
  The primary purpose of this project was strict data validation. I wanted to design and deploy a secure backend authentication service that bridges the gap between web routing protocols and persistent relational database store. 
 
 
 
 ## Technical Stack 
 
- 
 
-| Technology | Logo / Badge | Component Layer | Project Implementation Role | 
-
-| :--- | :--- | :--- | :--- | 
-
-| **Python 3** | ![Python](https://shields.io) | Core Language | Powers the underlying Object-Oriented application logic, module dependencies, and functional scripting. | 
-
-| **FastAPI** | ![FastAPI](https://shields.io) | Web API Framework | Orchestrates the high-performance asynchronous web routing endpoints (`/register` and `/login`) and manages JSON HTTP requests. | 
-
-| **Pydantic** | ![Pydantic](https://shields.io) | Schema Validation | Enforces strict backend data schemas and typing validation on incoming payloads before they hit the database. | 
-
-| **PostgreSQL** | ![PostgreSQL](https://shields.io) | Relational Database | Manages secure user record tables, unique constraints, and handles persistent database state storage. | 
-
-| **bcrypt** | ![bcrypt](https://shields.io) | Cryptography & Identity | Manages industry-standard adaptive hashing and automatic salting protocols to prevent credential exposure. | 
-
-| **pytest** | ![Pytest](https://shields.io) | Test Automation | Drives the comprehensive integration testing pipeline to ensure component reliability and validate endpoint functionality. | 
-
-| **Git** | ![Git](https://shields.io) | Version Control | Manages local workspace repositories, branching, configuration exclusion tracking, and deployment synchronization. |
+| Technology | Component Layer | Project Implementation Role |
+| :--- | :--- | :--- |
+| **Python 3** | Core Language | Powers the underlying object-oriented application logic, module dependencies, and functional scripting. |
+| **FastAPI** | Web API Framework | Orchestrates the asynchronous web routing endpoints (`/register` and `/login`) and manages JSON HTTP requests. |
+| **Pydantic** | Schema Validation | Enforces strict backend data schemas and type validation on incoming payloads before they hit the database. |
+| **PostgreSQL** | Relational Database | Manages secure user record tables, unique constraints, and persistent state storage. |
+| **bcrypt** | Cryptography & Identity | Handles adaptive hashing and automatic salting to prevent credential exposure. |
+| **pytest** | Test Automation | Drives integration testing to validate endpoint functionality and component reliability. |
+| **Git** | Version Control | Manages local repositories, branching, configuration exclusion, and deployment synchronization. |
  
 
 ## Architecture & Security Implementations 
@@ -52,6 +46,7 @@ I created a backend service designed to securely manage user registration and au
 
 * **Automated Regression Suite:** Built full-lifecycle integration testing using a `pytest` execution suite and FastAPI `TestClient` to validate HTTP responses, registration uniqueness, and validation code status flows. 
 
+* **Deterministic Database Lifecycle Isolation:** Employs a dedicated `pytest` database cleanup fixture using psycopg2. The fixture targets and purges ephemeral mock profiles (e.g., test users and injection payloads) before or after execution loops, ensuring a completely stateless, repeatable test cycle without modifying structural database schemas. 
  
 
 ## Local Installation  
