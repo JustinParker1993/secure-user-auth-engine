@@ -100,15 +100,15 @@ This system features complete test coverage using automated integration validati
 
 platform win32 -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0
 
-rootdir: C:\Users\Justin\OneDrive\Desktop\Projects\secure-user-auth-engine
+rootdir: C:\Users\Justi\Projects\secure-user-auth-engine
 
 plugins: anyio-4.15.1
 
-collected 1 item
+collected 4 items
 
-test_main.py .                                                           [100%]
+test_main.py ....                                                           [100%]
 
-======================== 1 passed, 2 warnings in 2.13s ========================
+============================= 4 passed in 3.73s ==============================
 
 ```
 
